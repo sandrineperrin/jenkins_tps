@@ -9,7 +9,7 @@ node {
   }
 
   stage ('1- Print Jenskins variables'){
-    echo "env.GLOBAL_JENKINS_VARIABLE"
+    echo "$env.VAR_GLOBAL"
   }
   stage ('1- Print all env'){
     echo 'Affiche toutes les variables environnement disponibles :'
@@ -29,12 +29,12 @@ node {
     '''
 
     // Pour récupérer la valeur dans le script
-    def value = params.missing_param
-    def value_upper = params.missing_param.toUpperCase()
+    def value = params.var_param
+    def value_upper = params.var_param.toUpperCase()
 
-    println "Print default => " + params.missing_param
-    println "Print default => " + valuue
-    println "Print upper case value =>  + value_upper"
+    println "Print default => " + params.var_param
+    println "Print default => " + value
+    println "Print upper case value => $value_upper"
 
   }
 }
