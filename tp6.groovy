@@ -3,10 +3,10 @@
 //
 node {
 
-  stage('0- clean'){
-    deleteDir()
-    checkout scm
-  }
+//  stage('0- clean'){
+  //  deleteDir()
+  //  checkout scm
+ // }
 
   stage ('1- Print Jenskins variables'){
     echo "env.GLOBAL_JENKINS_VARIABLE"
