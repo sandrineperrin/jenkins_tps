@@ -11,4 +11,7 @@ node {
   stage ('Deploy') {
     sh 'echo Command to deploy application'
   }
+  stage('content'){
+    sh 'ls -l' 
+  }
 }
