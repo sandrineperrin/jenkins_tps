@@ -1,4 +1,0 @@
-mount -o remount,exec /var
-systemctl restart docker
-docker stop $ID_CONTAINER
-docker start $ID_CONTAINER
